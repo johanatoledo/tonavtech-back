@@ -1,0 +1,9 @@
+PORT=4003
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=password_db
+DB_NAME=database_name
+DB_PORT=3306
+EMAIL_USER=email@example.com
+EMAIL_PASS=api_contraseña
+OPENAI_API_KEY=OPENAI_API_KEY
