@@ -7,6 +7,7 @@ import { obtenerServicios } from "./servicesController.js";
 import { crearLead } from "./leadsController.js";
 import { crearCotizacion } from "./quotesController.js";
 import { crearConversacion, guardarMensajeIA } from "./msjController.js";
+import { enviarCotizacionEmail } from "../services/emailService.js";
 
 import dotenv from 'dotenv';
 dotenv.config();

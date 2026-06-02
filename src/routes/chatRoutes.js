@@ -13,6 +13,10 @@ import {
 import {obtenerServicios } from "../controllers/servicesController.js";
 
 const router = express.Router();
+
+// ==========================================
+// DEFINICIÓN DE ENDPOINTS
+// ==========================================
 // Leads
 router.post("/leads", crearLead);
 router.get("/leads", obtenerLeads);

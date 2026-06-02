@@ -11,6 +11,9 @@ import {
 
 
 const router = express.Router();
+// ==========================================
+// DEFINICIÓN DE ENDPOINTS
+// ==========================================
 // Rutas para servicios
 router.post("/servicios", crearServicio); //para el panel administrativo.
 // Rutas para conversaciones

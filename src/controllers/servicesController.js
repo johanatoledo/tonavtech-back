@@ -36,3 +36,14 @@ export const obtenerServicios = async (req, res) => {
     res.status(500).json({ message: "Error al obtener servicios" });
   }
 };
+
+export const obtenerServicioPorId = async (id) => {
+  const [rows] = await pool.query(
+    `SELECT id, nombre, slug, descripcion 
+     FROM servicios 
+     WHERE id = ? AND activo = TRUE`,
+    [id]
+  );
+
+  return rows[0] || null;
+};
