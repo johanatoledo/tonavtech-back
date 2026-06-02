@@ -1,12 +1,8 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-
-import leadsRoutes from "./routes/leadsRoutes.js";
-import servicesRoutes from "./routes/servicesRoutes.js";
-import msjRoutes from "./routes/msjRoutes.js";
-import projectsRoutes from "./routes/projectsRoutes.js";
-import quotesRoutes from "./routes/quotesRoutes.js";
+import chatRoutes from './src/routes/chatRoutes.js';
+import adminRoutes from './src/routes/adminRoutes.js';
 
 dotenv.config();
 
@@ -87,13 +83,13 @@ app.get("/api/health", async (req, res) => {
 // ==========================================
 // DEFINICIÓN DE ENDPOINTS
 // ==========================================
+app.use('/chat', chatRoutes);
+app.use('/admin', adminRoutes);
 
-app.use("/leads", leadsRoutes); // Mantener este endpoint sin prefijo para que el formulario de contacto funcione correctamente
-app.use("/admin/servicios", servicesRoutes);
-app.use("/admin/conversaciones", msjRoutes);
-app.use("/admin/proyectos", projectsRoutes);
-app.use("/admin/cotizaciones", quotesRoutes);
 
+app.get('/', (req, res) => {
+  res.send('Limenita backend running');
+});
 
 
 // ==========================================
