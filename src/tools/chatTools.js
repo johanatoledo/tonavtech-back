@@ -127,6 +127,7 @@ export const tools = [
     parameters: {
       type: "object",
       properties: {
+        servicio_id: { type: "number" },
         email: { type: "string" },
         nombre: { type: "string" },
         servicio: { type: "string" },
